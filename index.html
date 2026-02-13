@@ -7,8 +7,21 @@
 </head>
 <body>
 
-    <section class= "section"><h3>Hero</h3>
+    --------------------------------------------------
+    | HERO (left aligned, constrained width)         |
+    --------------------------------------------------
+    | PROJECTS (darker section, 2-column grid)      |
+    --------------------------------------------------
+    | ABOUT (left aligned, resume tone)              |
+    --------------------------------------------------
+    | CONTACT (minimal, clean)                       |
+    --------------------------------------------------
+
+
+    <section class= "section" id="hero-container"><h3>Hero</h3>
         <article>
+                <!-- Full-Stack Developer
+                Focused on Structured, Scalable Systems -->
             🟩 Hero Section
             ☑ Left‑aligned
             ☑ Strong headline + positioning
@@ -16,14 +29,30 @@
             This ensures recruiters see your value immediately.
         </article>
     </section>
-    <section class= "section">Projects
+    <section class= "section" id="projects-container">Projects
         <h4>🟨 Projects Section</h4>
-        <article class= "card-layout">🧩 Projects Section Layout
+        <article id= "cards-container">🧩         Projects Section Layout
                     Use 2 projects (quality > quantity).
             <div class="project-card">
-                    Each project card should show:
+                <img class= "card-image" src="" alt="">
+                <!-- Typography Inside Card
+                Title:
+                Larger
+                Strong weight
+                Description:
+                Muted tone
+                Max 2–3 lines
+                Bullet highlights:
+                Small
+                Compact
+                Focused on systems
+                Buttons:
+                Inline
+                Violet border or filled
+                Slight glow on hover -->
+
                 <h5>Project Name</h5>
-                <p>1 sentence description</p>
+                <p class="card-text">1 sentence description</p>
                 <ul>
                     <h4>Stack</h4>
                     <li>3–4</li> <li>bullet</li> <li>highlights</li>
@@ -41,6 +70,15 @@
         </article>
     </section>
     <section id="about-section"><h3>About</h3> <br/>
+            <!-- Content:
+            Short paragraph
+            Skills grouped cleanly
+            Example grouping:
+            Core Stack
+            MongoDB · Express · React · Node
+            Systems & Tools
+            Docker · REST APIs · Git · Postman
+            That feels professional. -->
         <article>
             🟧 About + Skills
             Organize skills in a readable list (e.g., Core Stack, Tools).
@@ -55,6 +93,13 @@
         ☑ Portfolio link again
         Making contact info easy = more clicks.
     </section>
+    <h3>9️⃣ Responsive Adjustments
+        Goal: Works on tablet & mobile.
+        2-column grid → 1 column < 768px
+        Font sizes scale slightly for smaller screens
+        Padding reduces slightly on mobile
+        ✅ Checkpoint: Page readable on phone & tablet.
+    </h3>
     
 </body>
 </html>

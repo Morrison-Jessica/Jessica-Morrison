@@ -1,4 +1,73 @@
-/* body {} // main section
+/* 
+:root {
+🎨 Color System 
+    --bg-color: #0f0f14;
+    --accent: #b388ff;
+    --card-bg: #14141c;
+    --projects-bg: #0a0a10;
+    
+
+
+    --font: 'Inter', sans-serif;
+        // Different weights for hierarchy:
+        700 → hero
+        600 → section/project titles
+        500 → subtitles/buttons
+        400 → body text
+    --text-color: #e8e8ef;
+
+    Primary text:
+#e8e8ef
+
+Muted text:
+#a1a1b3
+
+    --line-height: 1.5;
+
+        // 🌟 Suggested Typography
+        Element	Font / Weight	Size (rem)	Notes
+        -Hero Title	Inter / Bold (700)	3.5–4rem	Large, left-aligned, confident
+
+        -Hero Subtitle	Inter / Medium (500)	1.25–1.5rem	Short positioning statement
+        
+        -Section Headings	Inter / Semi-Bold (600)	2rem	Slight violet underline accent
+        
+        -Project Card Title	Inter / Semi-Bold (600)	1.25–1.5rem	Clear, readable, structured
+        
+        -Card Body / Bullets	Inter / Regular (400)	1rem	Keep bullet text compact & readable
+        
+        -About Text	Inter / Regular (400)	1rem	Maintain line-height 1.5–1.6
+        
+        -Buttons / Links	Inter / Medium (500)	1rem	Violet accent, subtle hover glow
+
+
+    --margin1: ;
+    --margin2: ;
+    --section-padding: 5rem;
+    --max-width: 1100px;
+
+    --card-gap: 2rem;
+    --card-padding: 1.75rem;
+    --card-radius: 12px;
+    
+ 
+}
+
+body {} // main section
+⚪️
+        Suggested Scale for Your Portfolio
+        Element	Space (px/rem)	Notes
+        -Hero bottom padding	6–8rem	Gives breathing room to Projects
+        -Projects section top/bottom	5–6rem	Slightly darker section feels anchored
+        -Card gap (grid)	2rem	Between columns and rows
+        -Card padding (inside)	1.75–2rem	Consistent interior breathing
+        -Card screenshot bottom	1.25rem	Between image and text
+        -Bullet gap inside card	0.75–1rem	Keeps info readable
+        -Buttons gap	1rem	Small but distinct separation
+        -About section top padding	5rem	Consistent with Projects top
+        -About paragraph line-height	1.5–1.6	Comfortable reading
+        -Contact top padding	5rem	Clear separation from About
+
 h1 {}
 
 h2 {}
@@ -10,15 +79,102 @@ h5 {}
 
 p {}
 
-.section {}  
+.section {} 
+🫙 
+
+#hero-container {} // hero section
+😁🫙
 
 article {}  // sub-sections
+🗞️🫙
 
-div {} // cards
+#projects-container {}  // cards section layout
+🛠️🫙
+            Max width: 1100px
+        Centered
+        Side padding: 2rem
+        Top padding: 5rem
+        Bottom padding: 6rem
+        Grid
+        Desktop:
+        2 columns
+        Gap: 2rem
+        Tablet:
+        1 column
+        Clean. No weird breakpoints.
+    4️⃣ Projects Grid
+    Goal: Two-column layout, responsive.
+    .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--card-gap);
+
+#cards-container {}
+🃏🫙
+    Border radius: 12px–14px
+    Padding: 1.75rem
+    No heavy shadow
+    Subtle hover lift (translateY small)
+  
+    }
+✅ Checkpoint: Cards line up in 2 columns on desktop, 1 column on narrow screens.
+
+.project-card {} // cards
+🃏
+            ----------------------------------
+            | Screenshot (full width)        |
+            ----------------------------------
+            | Title                          |
+            | Short description              |
+            |                                |
+            | • Stack                        |
+            | • Architecture note            |
+            | • Key system decision          |
+            |                                |
+            | [ Live Demo ]   [ GitHub ]     |
+            ----------------------------------
+        📐Inside card:
+        Padding: 1.5rem–2rem
+        Gap between elements: consistent vertical rhythm (0.75rem–1rem)
+        Screenshot bottom margin: 1.25rem
+        Button spacing: 1rem gap between buttons
+
+   -- Project Card
+    Goal: Structured, readable, subtle hover.
+
+    Background: #14141c
+    Border-radius: var(--card-radius)
+    Padding: var(--card-padding)
+    Flex direction: column (stack image + text + buttons)
+    Hover: subtle translateY(-5px) + box-shadow if desired
+    Internal spacing: screenshot bottom margin 1.25rem, bullets 0.75–1rem, button gap 1rem
+    ✅ Checkpoint: Cards look like neat blocks with breathing room.
+
+.card-text {}
+🃏📝
+    -- Project Card Text
+    Goal: Hierarchy with one sans-serif family.
+    Title: semi-bold, 1.25–1.5rem
+    Body/bullets: regular 1rem, muted color (#a1a1b3)
+    Buttons: medium, accent color, subtle glow on hover
+✅ Checkpoint: Content readable, hierarchy clear.
+
+.card-image: {} 
+🌠 
+    Screenshot
+    Width: 100%
+    Height: fixed (around 200–220px)
+    Object-fit: cover
+    Slight border-radius
+    Bottom margin: 1.25rem
+    No giant screenshots.
 
 ul {}  // tech stack & systems focus
+📋
 
 #buttons {} 
+#️⃣
 
 a {}
+🔗
 */
