@@ -1,2 +1,1 @@
-# Jessica-Morrison
-Main Personal Repo
+# Jessica Morrison – Developer Portfolio
