@@ -1,180 +1,325 @@
-/* 
 :root {
-🎨 Color System 
-    --bg-color: #0f0f14;
-    --accent: #b388ff;
-    --card-bg: #14141c;
-    --projects-bg: #0a0a10;
-    
+  --bg-color: #0f0f14;
+  --projects-bg: #0a0a10;
+  --card-bg: #14141c;
+  --text-color: #e8e8ef;
+  --muted-text: #a1a1b3;
+  --accent: #b388ff;
+  --accent-strong: #9f6eff;
+  --border: #232333;
 
+  --font: "Inter", sans-serif;
+  --line-height: 1.55;
 
-    --font: 'Inter', sans-serif;
-        // Different weights for hierarchy:
-        700 → hero
-        600 → section/project titles
-        500 → subtitles/buttons
-        400 → body text
-    --text-color: #e8e8ef;
-
-    Primary text:
-#e8e8ef
-
-Muted text:
-#a1a1b3
-
-    --line-height: 1.5;
-
-        // 🌟 Suggested Typography
-        Element	Font / Weight	Size (rem)	Notes
-        -Hero Title	Inter / Bold (700)	3.5–4rem	Large, left-aligned, confident
-
-        -Hero Subtitle	Inter / Medium (500)	1.25–1.5rem	Short positioning statement
-        
-        -Section Headings	Inter / Semi-Bold (600)	2rem	Slight violet underline accent
-        
-        -Project Card Title	Inter / Semi-Bold (600)	1.25–1.5rem	Clear, readable, structured
-        
-        -Card Body / Bullets	Inter / Regular (400)	1rem	Keep bullet text compact & readable
-        
-        -About Text	Inter / Regular (400)	1rem	Maintain line-height 1.5–1.6
-        
-        -Buttons / Links	Inter / Medium (500)	1rem	Violet accent, subtle hover glow
-
-
-    --margin1: ;
-    --margin2: ;
-    --section-padding: 5rem;
-    --max-width: 1100px;
-
-    --card-gap: 2rem;
-    --card-padding: 1.75rem;
-    --card-radius: 12px;
-    
- 
+  --max-width: 1100px;
+  --section-padding: 5rem;
+  --card-gap: 2rem;
+  --card-padding: 1.75rem;
+  --card-radius: 12px;
 }
 
-body {} // main section
-⚪️
-        Suggested Scale for Your Portfolio
-        Element	Space (px/rem)	Notes
-        -Hero bottom padding	6–8rem	Gives breathing room to Projects
-        -Projects section top/bottom	5–6rem	Slightly darker section feels anchored
-        -Card gap (grid)	2rem	Between columns and rows
-        -Card padding (inside)	1.75–2rem	Consistent interior breathing
-        -Card screenshot bottom	1.25rem	Between image and text
-        -Bullet gap inside card	0.75–1rem	Keeps info readable
-        -Buttons gap	1rem	Small but distinct separation
-        -About section top padding	5rem	Consistent with Projects top
-        -About paragraph line-height	1.5–1.6	Comfortable reading
-        -Contact top padding	5rem	Clear separation from About
+* {
+  box-sizing: border-box;
+}
 
-h1 {}
+html {
+  scroll-behavior: smooth;
+}
 
-h2 {}
+body {
+  margin: 0;
+  background: radial-gradient(circle at 15% 10%, #191926 0%, var(--bg-color) 45%);
+  color: var(--text-color);
+  font-family: var(--font);
+  line-height: var(--line-height);
+}
 
-h3 {}
+.container {
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+}
 
-h4 {}
-h5 {}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(15, 15, 20, 0.85);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
 
-p {}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 72px;
+  gap: 1.25rem;
+}
 
-.section {} 
-🫙 
+.brand {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
 
-#hero-container {} // hero section
-😁🫙
+nav {
+  display: flex;
+  gap: 1rem;
+}
 
-article {}  // sub-sections
-🗞️🫙
+nav a {
+  color: var(--muted-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 180ms ease;
+}
 
-#projects-container {}  // cards section layout
-🛠️🫙
-            Max width: 1100px
-        Centered
-        Side padding: 2rem
-        Top padding: 5rem
-        Bottom padding: 6rem
-        Grid
-        Desktop:
-        2 columns
-        Gap: 2rem
-        Tablet:
-        1 column
-        Clean. No weird breakpoints.
-    4️⃣ Projects Grid
-    Goal: Two-column layout, responsive.
-    .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: var(--card-gap);
+nav a:hover,
+nav a:focus-visible {
+  color: var(--text-color);
+}
 
-#cards-container {}
-🃏🫙
-    Border radius: 12px–14px
-    Padding: 1.75rem
-    No heavy shadow
-    Subtle hover lift (translateY small)
-  
-    }
-✅ Checkpoint: Cards line up in 2 columns on desktop, 1 column on narrow screens.
+.section {
+  padding-block: var(--section-padding);
+}
 
-.project-card {} // cards
-🃏
-            ----------------------------------
-            | Screenshot (full width)        |
-            ----------------------------------
-            | Title                          |
-            | Short description              |
-            |                                |
-            | • Stack                        |
-            | • Architecture note            |
-            | • Key system decision          |
-            |                                |
-            | [ Live Demo ]   [ GitHub ]     |
-            ----------------------------------
-        📐Inside card:
-        Padding: 1.5rem–2rem
-        Gap between elements: consistent vertical rhythm (0.75rem–1rem)
-        Screenshot bottom margin: 1.25rem
-        Button spacing: 1rem gap between buttons
+#hero-container {
+  padding-top: 6rem;
+  padding-bottom: 7rem;
+}
 
-   -- Project Card
-    Goal: Structured, readable, subtle hover.
+.hero-content {
+  max-width: 760px;
+  animation: rise 420ms ease both;
+}
 
-    Background: #14141c
-    Border-radius: var(--card-radius)
-    Padding: var(--card-padding)
-    Flex direction: column (stack image + text + buttons)
-    Hover: subtle translateY(-5px) + box-shadow if desired
-    Internal spacing: screenshot bottom margin 1.25rem, bullets 0.75–1rem, button gap 1rem
-    ✅ Checkpoint: Cards look like neat blocks with breathing room.
+.eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+}
 
-.card-text {}
-🃏📝
-    -- Project Card Text
-    Goal: Hierarchy with one sans-serif family.
-    Title: semi-bold, 1.25–1.5rem
-    Body/bullets: regular 1rem, muted color (#a1a1b3)
-    Buttons: medium, accent color, subtle glow on hover
-✅ Checkpoint: Content readable, hierarchy clear.
+h1 {
+  margin: 0.75rem 0 1rem;
+  font-size: clamp(2.3rem, 5vw, 3.7rem);
+  line-height: 1.1;
+}
 
-.card-image: {} 
-🌠 
-    Screenshot
-    Width: 100%
-    Height: fixed (around 200–220px)
-    Object-fit: cover
-    Slight border-radius
-    Bottom margin: 1.25rem
-    No giant screenshots.
+.hero-text {
+  margin: 0;
+  color: var(--muted-text);
+  max-width: 64ch;
+  font-size: 1.08rem;
+}
 
-ul {}  // tech stack & systems focus
-📋
+.button-row,
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
 
-#buttons {} 
-#️⃣
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
 
-a {}
-🔗
-*/
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  box-shadow: 0 8px 18px rgba(159, 110, 255, 0.26);
+}
+
+.btn-secondary {
+  color: var(--text-color);
+  border-color: #4b3a73;
+  background: rgba(179, 136, 255, 0.1);
+}
+
+#projects-container {
+  background: var(--projects-bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 3vw, 2rem);
+}
+
+.section-intro {
+  margin: 0.8rem 0 2rem;
+  color: var(--muted-text);
+}
+
+#cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--card-gap);
+}
+
+.project-card {
+  background: linear-gradient(180deg, #161621 0%, var(--card-bg) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.25);
+}
+
+.card-image {
+  width: 100%;
+  height: 210px;
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg, rgba(179, 136, 255, 0.34), rgba(47, 35, 75, 0.95)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.07) 0 10px, rgba(255, 255, 255, 0) 10px 20px);
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.35rem;
+}
+
+.card-text {
+  margin: 0 0 1.1rem;
+  color: var(--muted-text);
+}
+
+.list-label {
+  margin: 1rem 0 0.4rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--muted-text);
+}
+
+ul + .list-label {
+  margin-top: 1.15rem;
+}
+
+li + li {
+  margin-top: 0.45rem;
+}
+
+#about-section p,
+#contact-section p {
+  color: var(--muted-text);
+}
+
+.about-content {
+  max-width: 760px;
+}
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.1rem;
+}
+
+.skill-groups h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.skill-groups p {
+  margin: 0;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 1.4rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  border-bottom-color: var(--accent);
+}
+
+.contact-content {
+  max-width: 760px;
+}
+
+.contact-list {
+  margin-top: 1rem;
+  padding-left: 1.15rem;
+}
+
+.contact-list a {
+  color: var(--text-color);
+  text-decoration-color: #635180;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 900px) {
+  #cards-container,
+  .skill-groups {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: 3.75rem;
+  }
+
+  #hero-container {
+    padding-top: 4rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 0.75rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

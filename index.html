@@ -1,105 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jessica Morrison Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jessica Morrison is a full-stack developer focused on structured, scalable systems and clean architecture.">
+  <title>Jessica Morrison | Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <p class="brand">Jessica Morrison</p>
+      <nav aria-label="Primary">
+        <a href="#projects-container">Projects</a>
+        <a href="#about-section">About</a>
+        <a href="#contact-section">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    --------------------------------------------------
-    | HERO (left aligned, constrained width)         |
-    --------------------------------------------------
-    | PROJECTS (darker section, 2-column grid)      |
-    --------------------------------------------------
-    | ABOUT (left aligned, resume tone)              |
-    --------------------------------------------------
-    | CONTACT (minimal, clean)                       |
-    --------------------------------------------------
-
-
-    <section class= "section" id="hero-container"><h3>Hero</h3>
-        <article>
-                <!-- Full-Stack Developer
-                Focused on Structured, Scalable Systems -->
-            🟩 Hero Section
-            ☑ Left‑aligned
-            ☑ Strong headline + positioning
-            ☑ Resume link + GitHub link clearly included
-            This ensures recruiters see your value immediately.
-        </article>
+  <main>
+    <section class="section" id="hero-container">
+      <div class="container hero-content">
+        <p class="eyebrow">Full-Stack Developer</p>
+        <h1>Focused on Structured, Scalable Systems.</h1>
+        <p class="hero-text">
+          I build clean, maintainable web applications with strong architecture, efficient data handling,
+          and practical delivery for real-world teams.
+        </p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="https://github.com/Morrison-Jessica" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-secondary" href="#" aria-label="Resume link">Resume</a>
+        </div>
+      </div>
     </section>
-    <section class= "section" id="projects-container">Projects
-        <h4>🟨 Projects Section</h4>
-        <article id= "cards-container">🧩         Projects Section Layout
-                    Use 2 projects (quality > quantity).
-            <div class="project-card">
-                <img class= "card-image" src="" alt="">
-                <!-- Typography Inside Card
-                Title:
-                Larger
-                Strong weight
-                Description:
-                Muted tone
-                Max 2–3 lines
-                Bullet highlights:
-                Small
-                Compact
-                Focused on systems
-                Buttons:
-                Inline
-                Violet border or filled
-                Slight glow on hover -->
 
-                <h5>Project Name</h5>
-                <p class="card-text">1 sentence description</p>
-                <ul>
-                    <h4>Stack</h4>
-                    <li>3–4</li> <li>bullet</li> <li>highlights</li>
-                </ul>
-                <ul>✔ System‑focused
-                    <li>bullets (what you architected)</li>
-                </ul>
-                <article id="buttons">
-                    ✔ Buttons:
-                    <button><a href="">Live Demo</a>  </button> 
-                    <button><a href="">GitHub</a></button>
-                </article>
+    <section class="section" id="projects-container">
+      <div class="container">
+        <h2>Selected Projects</h2>
+        <p class="section-intro">Two system-focused builds that highlight architecture decisions and implementation quality.</p>
+
+        <div id="cards-container">
+          <article class="project-card">
+            <div class="card-image" role="img" aria-label="Screenshot placeholder for project one"></div>
+            <h3>Architecture-Driven API Platform</h3>
+            <p class="card-text">
+              Backend-first platform for managing service workflows with role-based access and consistent data contracts.
+            </p>
+            <p class="list-label">Stack</p>
+            <ul>
+              <li>Node.js + Express</li>
+              <li>MongoDB + Mongoose</li>
+              <li>JWT Authentication</li>
+              <li>Docker</li>
+            </ul>
+            <p class="list-label">System Focus</p>
+            <ul>
+              <li>Designed modular route/controller/service layers</li>
+              <li>Added validation and error middleware for API consistency</li>
+              <li>Implemented role-aware authorization boundaries</li>
+            </ul>
+            <div class="buttons">
+              <a class="btn btn-secondary" href="#" aria-label="Live demo for Architecture-Driven API Platform">Live Demo</a>
+              <a class="btn btn-primary" href="#" aria-label="GitHub repository for Architecture-Driven API Platform">GitHub</a>
             </div>
-            <br />
-        </article>
+          </article>
+
+          <article class="project-card">
+            <div class="card-image" role="img" aria-label="Screenshot placeholder for project two"></div>
+            <h3>Operations Dashboard System</h3>
+            <p class="card-text">
+              Full-stack dashboard for tracking operational metrics with clear data visualization and maintainable client state.
+            </p>
+            <p class="list-label">Stack</p>
+            <ul>
+              <li>React</li>
+              <li>REST API</li>
+              <li>Postman</li>
+              <li>GitHub Actions</li>
+            </ul>
+            <p class="list-label">System Focus</p>
+            <ul>
+              <li>Created reusable component structure for dashboard modules</li>
+              <li>Normalized API responses for predictable rendering paths</li>
+              <li>Improved reliability with staged environment checks</li>
+            </ul>
+            <div class="buttons">
+              <a class="btn btn-secondary" href="#" aria-label="Live demo for Operations Dashboard System">Live Demo</a>
+              <a class="btn btn-primary" href="#" aria-label="GitHub repository for Operations Dashboard System">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
-    <section id="about-section"><h3>About</h3> <br/>
-            <!-- Content:
-            Short paragraph
-            Skills grouped cleanly
-            Example grouping:
-            Core Stack
-            MongoDB · Express · React · Node
-            Systems & Tools
-            Docker · REST APIs · Git · Postman
-            That feels professional. -->
-        <article>
-            🟧 About + Skills
-            Organize skills in a readable list (e.g., Core Stack, Tools).
-            Social proof (LinkedIn link) here helps recruiters connect dots.
-        </article>
+
+    <section class="section" id="about-section">
+      <div class="container about-content">
+        <h2>About</h2>
+        <p>
+          I approach software the way strong teams ship it: clear architecture first, implementation discipline second,
+          and long-term maintainability always. My focus is building systems that scale cleanly and stay readable.
+        </p>
+
+        <div class="skill-groups">
+          <div>
+            <h3>Core Stack</h3>
+            <p>MongoDB · Express · React · Node.js</p>
+          </div>
+          <div>
+            <h3>Systems &amp; Tools</h3>
+            <p>Docker · REST APIs · Git · Postman</p>
+          </div>
+        </div>
+
+        <a class="text-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a>
+      </div>
     </section>
-    <section id="contact-section"><h3>Contact</h3> <br/>
-        🟥 Contact
-        ☑ Email
-        ☑ LinkedIn
-        ☑ GitHub
-        ☑ Portfolio link again
-        Making contact info easy = more clicks.
+
+    <section class="section" id="contact-section">
+      <div class="container contact-content">
+        <h2>Contact</h2>
+        <p>Open to software engineering opportunities and technical collaboration.</p>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:jessica@example.com">jessica@example.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-profile</a></li>
+          <li>GitHub: <a href="https://github.com/Morrison-Jessica" target="_blank" rel="noopener noreferrer">github.com/Morrison-Jessica</a></li>
+          <li>Portfolio: <a href="https://jessica-morrison.github.io/" target="_blank" rel="noopener noreferrer">jessica-morrison.github.io</a></li>
+        </ul>
+      </div>
     </section>
-    <h3>9️⃣ Responsive Adjustments
-        Goal: Works on tablet & mobile.
-        2-column grid → 1 column < 768px
-        Font sizes scale slightly for smaller screens
-        Padding reduces slightly on mobile
-        ✅ Checkpoint: Page readable on phone & tablet.
-    </h3>
-    
+  </main>
 </body>
 </html>
